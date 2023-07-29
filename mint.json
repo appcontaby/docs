@@ -1,9 +1,13 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Starter Kit",
+  "name": "Docs Contaby",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/ContabyBlanco.svg",
+    "light": "/logo/ContabyColor.svg"
+  },
+  "modeToggle": {
+    "default": "dark",
+    "isHidden": true
   },
   "favicon": "/favicon.png",
   "colors": {
@@ -20,45 +24,25 @@
   },
   "topbarLinks": [
     {
-      "name": "Support",
-      "url": "mailto:hi@mintlify.com"
+      "name": "Soporte",
+      "url": "mailto:soporte@contaby.mx"
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "name": "Contaby",
+    "url": "https://contaby.mx"
   },
-  "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    }
-  ],
   "anchors": [
     {
-      "name": "Documentation",
-      "icon": "book-open-cover",
-      "url": "https://mintlify.com/docs"
-    },
-    {
-      "name": "Community",
-      "icon": "slack",
-      "url": "https://mintlify.com/community"
-    },
-    {
-      "name": "Blog",
-      "icon": "newspaper",
-      "url": "https://mintlify.com/blog"
+      "name": "API CFDIs",
+      "url": "api-reference",
+      "icon": "code"
     }
   ],
   "navigation": [
     {
-      "group": "Get Started",
-      "pages": ["introduction", "quickstart", "development"]
-    },
-    {
-      "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "group": "Primeros pasos",
+      "pages": ["introduction", "quickstart", "authentication"]
     },
     {
       "group": "API Documentation",
@@ -78,5 +62,14 @@
     "twitter": "https://twitter.com/mintlify",
     "github": "https://github.com/mintlify",
     "linkedin": "https://www.linkedin.com/company/mintsearch"
+  },
+  "api": {
+    "auth": {
+      "method": "bearer",
+      "name": "ApiKey"
+    },
+    "playground": {
+      "mode": "hide"
+    }
   }
 }

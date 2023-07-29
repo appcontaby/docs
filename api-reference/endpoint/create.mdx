@@ -1,7 +1,7 @@
 ---
-title: "Create User"
-api: "POST https://api.mintlify.com/api/user"
-description: "This endpoint creates a new user"
+title: "Registrar Empresa/Emisor."
+api: "POST /business"
+description: "/business"
 ---
 
 ### Body
@@ -57,11 +57,17 @@ The contents of the user group
 <RequestExample>
 
 ```bash Example Request
-curl --location --request POST 'https://api.mintlify.com/api/user' \
---header 'Content-Type: application/json' \
---header 'Authorization: Token <token>' \
---data-raw '{
-    "current_token": ""
+    curl -s -L -X POST 'https://test.contaby.mx/v2/business' \
+    -H 'Content-Type: application/json' \
+    -H 'Authorization: Bearer ApiKey' \
+    -d '{
+    "rfc": "",
+    "name": "",
+    "fiscal_regime": "",
+    "zip_code": "",
+    "csd_cer": "",
+    "csd_key": "",
+    "csd_password": ""
 }'
 ```
 
@@ -70,15 +76,17 @@ curl --location --request POST 'https://api.mintlify.com/api/user' \
 <ResponseExample>
 
 ```json Response
-{
-  "success": 1,
-  "user_group": {
-    "team_id": 3,
-    "token": "<user_group_token_to_auth_dashboard>",
-    "name": "Example 1",
-    "provided_id": "example_1"
-  }
-}
+    {
+        "id": "",
+        "rfc": "",
+        "name": "",
+        "fiscal_regime": "",
+        "zip_code": "",
+        "logo": "",
+        "series": [],
+        "created_at": "",
+        "updated_at": ""
+    }
 ```
 
 </ResponseExample>
